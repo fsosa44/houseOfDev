@@ -31,7 +31,7 @@ export default function Register() {
     } else setError(false);
 
     axios
-      .post("http://localhost:3001/api/user/register", {
+      .post("https://house-api-chi.vercel.app/api/user/register", {
         email: email,
         name: name,
         lastName: lastName,

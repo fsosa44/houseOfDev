@@ -18,7 +18,7 @@ export default function Login() {
 
     axios
       .post(
-        "http://localhost:3001/api/user/login",
+        "https://house-api-chi.vercel.app/api/user/login",
         {
           email: email,
           password: password,

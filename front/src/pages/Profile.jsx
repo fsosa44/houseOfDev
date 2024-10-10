@@ -17,7 +17,7 @@ export default function Profile() {
   const handleChangeName = () => {
     axios
       .put(
-        "http://localhost:3001/api/user/profile",
+        "https://house-api-chi.vercel.app/api/user/profile",
         { name, lastName },
         { withCredentials: true }
       )

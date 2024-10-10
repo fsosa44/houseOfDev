@@ -7,7 +7,7 @@ function CitasLista() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001/api/citas/citas-lista")
+      .get("https://house-api-chi.vercel.app/api/citas/citas-lista")
       .then((response) => {
         setCitas(response.data);
       })
@@ -16,7 +16,7 @@ function CitasLista() {
       });
   }, []);
   const handleDeleteCita = (citaId) => {
-    axios.delete(`http://localhost:3001/api/admin/citas/${citaId}`).then(() => {
+    axios.delete(`https://house-api-chi.vercel.app/api/admin/citas/${citaId}`).then(() => {
       const updateCitas = citas.filter((cita) => cita.id !== citaId);
       setCitas(updateCitas);
     });

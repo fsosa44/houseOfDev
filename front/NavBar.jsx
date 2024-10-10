@@ -11,7 +11,7 @@ function NavBar() {
   const handleLogout = () => {
     axios
       .post(
-        "https://house-api-chi.vercel.app/api/user/logout",
+        "https://front-divue8j5d-fsosa44s-projects.vercel.app/api/user/logout",
         {},
         { withCredentials: true }
       )

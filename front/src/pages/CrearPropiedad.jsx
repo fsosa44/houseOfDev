@@ -19,7 +19,7 @@ export default function CrearPropiedad() {
     e.preventDefault();
 
     axios
-      .post("http://localhost:3001/api/properties/crearPropiedad", {
+      .post("https://house-api-chi.vercel.app/api/properties/crearPropiedad", {
         cantidadAmbientes: parseInt(cantidadAmbientes),
         ubicacion,
         barrio,

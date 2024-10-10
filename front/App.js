@@ -19,7 +19,7 @@ function App() {
   const dispatch = useDispatch();
   useEffect(() => {
     axios
-      .get("https://front-pink-beta.vercel.app//api/user/me", {
+      .get("https://house-api-chi.vercel.app/api/user/me", {
         withCredentials: true,
       })
       .then((res) => {

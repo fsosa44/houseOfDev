@@ -12,11 +12,19 @@ app.use(cookieParser());
 app.use(morgan("dev"));
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: "https://front-pink-beta.vercel.app",
     credentials: true,
+    allowedHeaders: ['Content-Type', 'Authorization'],
   })
 );
+
+// Ruta para comprobar que el servidor está corriendo
+app.get("/", (req, res) => {
+  res.send("El servidor está corriendo");
+});
+
 app.use("/api", routes);
+
 db.sync({ force: false })
   .then(function () {
     app.listen(3001, () =>

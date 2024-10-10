@@ -20,7 +20,7 @@ function PropertiesContainer() {
 
   const handleDeleteProperty = (propertyId) => {
     axios
-      .delete(`http://localhost:3001/api/properties/propiedades/${propertyId}`)
+      .delete(`https://house-api-chi.vercel.app/api/properties/propiedades/${propertyId}`)
       .then(() => {
         const updatedProperties = properties.filter(
           (property) => property.id !== propertyId
@@ -34,7 +34,7 @@ function PropertiesContainer() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001/api/properties/propiedades")
+      .get("https://house-api-chi.vercel.app/api/properties/propiedades")
       .then((res) => {
         setProperties(res.data);
       });

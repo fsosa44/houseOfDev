@@ -7,7 +7,7 @@ const UserList = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001/api/admin/users")
+      .get("https://house-api-chi.vercel.app/api/admin/users")
       .then((response) => {
         console.log("Datos de usuarios:", response.data);
         setUsers(response.data);
@@ -19,7 +19,7 @@ const UserList = () => {
 
   const handleDeleteUser = async (userId) => {
     try {
-      await axios.delete(`http://localhost:3001/api/admin/users/${userId}`);
+      await axios.delete(`https://house-api-chi.vercel.app/api/admin/users/${userId}`);
       const updatedUsers = users.filter((user) => user.id !== userId);
       setUsers(updatedUsers);
     } catch (error) {

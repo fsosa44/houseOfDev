@@ -23,7 +23,7 @@ function SingleView() {
       console.log(fecha);
 
       axios
-        .post(`http://localhost:3001/api/citas/reservar`, citaData)
+        .post(`https://house-api-chi.vercel.app/api/citas/reservar`, citaData)
         .then((response) => {
           alert("Cita creada con éxito!", response);
         })
@@ -38,7 +38,7 @@ function SingleView() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3001/api/properties/propiedades/${id}`)
+      .get(`https://house-api-chi.vercel.app/api/properties/propiedades/${id}`)
       .then((response) => {
         setProperty(response.data);
         console.log(response);
