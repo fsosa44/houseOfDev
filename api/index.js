@@ -18,7 +18,7 @@ app.use(
   })
 );
 
-// Ruta para comprobar que el servidor está corriendo
+
 app.get("/", (req, res) => {
   res.send("El servidor está corriendo");
 });
